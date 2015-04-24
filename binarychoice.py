@@ -4,8 +4,7 @@ def run():
     choices = []
     for i in range(listlength):
         print("Enter a value:")
-        temp = input()
-        choices.append(temp)
+        choices.append(input())
 
     print("Here is the winner! -> {0}".format(narrowdown(choices)))
 
