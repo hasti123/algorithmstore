@@ -8,6 +8,7 @@ def run():
 
     print("Here is the winner! -> {0}".format(narrowdown(choices)))
 
+
 def narrowdown(choices):
     tempList = []
 
@@ -19,8 +20,9 @@ def narrowdown(choices):
     
     for i in range(0,len(choices),2):
         print("Enter 1 for {0}\nEnter 2 for {1}".format(choices[i],choices[i+1]))
-        choice = int(input())
-        if choice == 1:
+
+        #need to protect against weird input
+        if int(input()) == 1:
             tempList.append(choices[i])
         else:
             tempList.append(choices[i+1])
